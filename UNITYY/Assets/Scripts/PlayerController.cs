@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask solidObjectLayer;
     public LayerMask interactiblesLayer;
+    public LayerMask CollectibleLayer;
 
     private void Awake()
     {
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactiblesLayer);
         if (collider != null)
         {
-            Debug.Log("There is an interactable object");
+            collider.GetComponent<Interactable>()?.Interact();
         }
     }
 

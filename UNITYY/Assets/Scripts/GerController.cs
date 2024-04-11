@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GerController : MonoBehaviour
+public class GerController :MonoBehaviour, Interactable
 {
-    void Interact()
+    public void Interact()
     {
-        Debug.Log("Ger is responding...")
+        Debug.Log("Ger is responding...");
     }
 }
